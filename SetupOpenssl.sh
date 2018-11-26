@@ -22,7 +22,7 @@ _ANDROID_EABI="arm-linux-androideabi-4.9"
 # Set _ANDROID_ARCH to the architecture you are building for.
 # This value is always used.
 # _ANDROID_ARCH=arch-x86
-_ANDROID_ARCH=arch-arm
+_ANDROID_ARCH=android-arm
 
 # Set _ANDROID_API to the API you want to use. You should set it
 # to one of: android-14, android-9, android-8, android-14, android-5
@@ -230,6 +230,6 @@ if [ ! -z "$VERBOSE" ] && [ "$VERBOSE" != "0" ]; then
   echo "ANDROID_DEV: $ANDROID_DEV"
 fi
 
-./config shared no-ssl3 no-comp no-hw no-engine
+./Configure android-arm shared no-ssl3 no-comp no-hw no-engine
 make depend
 make all

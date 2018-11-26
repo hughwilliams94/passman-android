@@ -1,23 +1,7 @@
 apply plugin: 'com.android.application'
-apply plugin: 'c'
 
 ext {
     supportLibraryVersion = '25.2.0'
-}
-
-repositories {
-        libs(PrebuiltLibraries) {
-            libcrypto {
-                binaries.withType(StaticLibraryBinary) {
-                    staticLibraryFile = file("libs/${targetPlatform.getName()}/libcrypto.a")
-                }
-            }
-            libssl {
-                binaries.withType(StaticLibraryBinary) {
-                    staticLibraryFile = file("libs/${targetPlatform.getName()}/libssl.a")
-                }
-            }
-        }
 }
 
 android {
